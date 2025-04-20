@@ -1,0 +1,131 @@
+html {
+  scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
+}
+body {
+  color: rgb(20,20,20);
+  background: linear-gradient(270deg,  rgb(233, 106, 134),  rgb(106, 172, 233),  rgb(163, 191, 218), rgb(222, 224, 226));
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+@media (min-width: 500px) and (max-width: 1000px){
+  body {
+    width: 90%;
+  }
+}
+#header {
+  display: flex;
+  flex-direction: row;
+  position: fixed; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 4rem;
+  background: linear-gradient(270deg, rgb(233, 106, 134),  rgb(106, 172, 233),  white, white, white);
+  justify-content: center;
+  align-items: center; 
+}
+#header-img{
+  height: 100%;
+  opacity: 0.7;
+}
+#nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+}
+.nav-link {
+  text-decoration: none;
+  color: rgb(12, 34, 82);
+  font-size: 1.1rem;
+  padding: 1% 50px;
+  font-weight: 700;
+}
+.main-section {
+  padding: 10%;
+  padding-top: 15vh;
+}
+h1 {
+  color: rgb(12, 34, 82);
+  font-size: 50px;
+}
+h2 {
+  color: rgb(8, 24, 58);
+  font-size: 25px;
+}
+p {
+  font-size: 20px;
+  color: rgb(5, 14, 32);
+}
+.div {
+  background-color: rgba(106, 172, 233, 0.26);
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 60%;
+  height: 1px;
+}
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+input {
+  width: 40%;
+  min-width: 200px;
+  margin: 1%;
+  height: 1.7rem;
+  font-size: 1.1rem;
+  background-color: rgba(106, 172, 233, 0.452);
+  border: 1px solid rgb(5, 5, 5);
+}
+#submit {
+  width: 20%;
+}
+p{
+  text-align: justify;
+}
+iframe {
+  width: 150px;
+  height: 100px;
+}
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.gear {
+  position: fixed;
+  top: 40%;
+  left: 40%;
+  width: 120px;
+  height: 120px;
+  border: 50px rgb(199, 216, 233) solid;
+  border-radius: 50%;
+  z-index: -1;
+  animation: spin 30s linear infinite;
+}
+
+.tooth {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(180deg,  rgb(221, 172, 182) 5%,  rgb(199, 216, 233) 30%);
+  top: -80px;
+  left: 25px;
+  transform-origin: 35px 140px;
+}
+
+/* Create 8 teeth  */
+.tooth:nth-child(2)  { transform: rotate(45deg);}
+.tooth:nth-child(3)  { transform: rotate(90deg);}
+.tooth:nth-child(4)  { transform: rotate(135deg);}
+.tooth:nth-child(5)  { transform: rotate(180deg);}
+.tooth:nth-child(6)  { transform: rotate(225deg);}
+.tooth:nth-child(7)  { transform: rotate(270deg);}
+.tooth:nth-child(8)  { transform: rotate(315deg);}
